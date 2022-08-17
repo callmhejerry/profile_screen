@@ -15,40 +15,56 @@ class ProfileTiles extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding: EdgeInsets.only(left: 6.w, right: 15.w),
-      height: 44.h,
+      padding: EdgeInsets.only(
+        left: 6.w,
+      ),
+      height: 46.h,
       width: double.infinity,
-      child: Row(children: [
-        Image.asset(imageUrl),
-        Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Image.asset(
+            imageUrl,
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  name,
-                  style: TextStyle(
-                    fontSize: 17,
-                    height: 1.29,
-                    letterSpacing: -0.41.w,
+                Expanded(
+                  child: Row(
+                    children: [
+                      Text(
+                        name,
+                        style: TextStyle(
+                          fontSize: 17,
+                          height: 1.29,
+                          letterSpacing: -0.41.w,
+                        ),
+                      ),
+                      const Spacer(),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.arrow_forward_ios,
+                          color: const Color(0xFF3C3C43).withOpacity(.30),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 15.w,
+                      )
+                    ],
                   ),
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.arrow_forward_ios,
-                    color: Color(0XFF3C3C43),
-                  ),
+                Divider(
+                  thickness: 1,
+                  color: const Color(0xFF3C3C43).withOpacity(0.29),
+                  height: 0,
                 ),
               ],
             ),
-            Divider(
-              thickness: 1,
-              color: const Color(0XFF3C3C43).withOpacity(0.29),
-            ),
-          ],
-        )
-      ]),
+          ),
+        ],
+      ),
     );
   }
 }

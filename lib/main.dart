@@ -19,12 +19,12 @@ class MyApp extends StatelessWidget {
           title: 'Flutter Demo',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            primarySwatch: Colors.blue,
+            fontFamily: "Inter",
           ),
           home: child,
         );
       },
-      designSize: const Size(37, 812),
+      designSize: const Size(375, 812),
       child: const ProfileScreen(),
     );
   }

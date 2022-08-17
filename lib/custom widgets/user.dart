@@ -11,15 +11,21 @@ class User extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
       color: Colors.white,
-      height: 84.w,
+      height: 84.h,
       width: double.infinity,
       child: Row(
         children: [
-          Image.asset("assets/profile.png"),
+          Image.asset(
+            "assets/profile.png",
+            height: 64.r,
+            width: 64.r,
+          ),
           SizedBox(
             width: 12.w,
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "Andrea Parker",
@@ -47,9 +53,9 @@ class User extends StatelessWidget {
           const Spacer(),
           IconButton(
             onPressed: () {},
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_forward_ios,
-              color: Color(0XFF3C3C43),
+              color: const Color(0XFF3C3C43).withOpacity(.30),
             ),
           ),
         ],
