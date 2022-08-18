@@ -14,7 +14,7 @@ class Track extends StatelessWidget {
       borderRadius: BorderRadius.zero,
       child: BackdropFilter(
         filter: ImageFilter.blur(
-          sigmaX: 5,
+          sigmaX: 6,
           sigmaY: 5,
         ),
         child: Container(
